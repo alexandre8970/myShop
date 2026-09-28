@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - MyShop</title>
+
+     <!-- Lien FontAwsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+     <!-- Lien vers Fichier CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+<body>
+
+    <header>
+        <!-- Titre Principal -->
+        <h1>My Shop</h1>
+        <h2>Ton équipement VTT, livré pour l’aventure.</h2>
+        <!-- Menu de navigation simple -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Acceuil</a>
+                </li>
+                <li>
+                    <a href="about.html">A propos</a>
+                </li>
+                <li>
+                    <a href="products.html">Produits</a>
+                </li>
+                <li>
+                    <a href="signup.html">Inscription</a>
+                </li>
+                <li>
+                    <a href="signin.html">Connexion</a>
+                </li>
+                <li>
+                    <a href="cart.html">Panier<a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Mon Panier</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Produit</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Chemise</td>
+                        <td>20</td>
+                        <td>1</td>
+                        <td>20</td>
+                        <td>
+                            <button type="button">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Robe</td>
+                        <td>15</td>
+                        <td>2</td>
+                        <td>30</td>
+                        <td>
+                            <button type="button">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td>50</td>
+                        <td>
+                            <button type="button">Commander</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+    <!-- Pieds de page -->
+    <footer>
+        <p>&copy; 2026 My Shop. Tous droits réservés. &copy;</p>
+
+        <!-- Liens vers les réseaux sociaux : facebook, twitter, instagram -->
+        <div>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.x.com" target="_blank">X</a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <!-- tel : Lien vers le téléphone, il permet de passer un appel directement depuis le site -->
+            <a href="tel:0312345678" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <!-- mailto : Lien vers l'email, il permet d'envoyer un email directement depuis le site -->
+            <a href="mailto:myshop@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+            <!-- download : Lien vers le fichier PDF, il permet de télécharger le fichier -->
+            <a href="assets/PDF/Mentions légales.pdf" download>Mentions Légales</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

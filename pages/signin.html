@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - MyShop</title>
+
+    <!-- Lien FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <!-- Lien vers Fichier CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Titre Principal -->
+        <h1>My Shop</h1>
+        <h2>Ton équipement VTT, livré pour l’aventure.</h2>
+        <!-- Menu de navigation simple -->
+        <ul>
+            <li>
+                <a href="../index.html">Acceuil</a>
+            </li>
+            <li>
+                <a href="about.html">A propos</a>
+            </li>
+            <li>
+                <a href="products.html">Produits</a>
+            </li>
+            <li>
+                <a href="signup.html">Inscription</a>
+            </li>
+            <li>
+                <a href="signin.html">Connexion</a>
+            </li>
+            <li>
+                <a href="cart.html">Panier<a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+
+        <form class="form">
+            <h2>Connexion</h2>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
+            </div>
+
+            <div>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+            </div>
+
+            <button type="submit">Se connecter</button>
+
+            <div>
+                <a href="inscription.html">Créer un compte</a>
+            </div>
+        </form>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 My Shop. Tous droits réservés. &copy;</p>
+
+        <div>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.x.com" target="_blank">X</a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <!-- tel : Lien vers le téléphone, il permet de passer un appel directement depuis le site -->
+            <a href="tel:0312345678" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <!-- mailto : Lien vers l'email, il permet d'envoyer un email directement depuis le site -->
+            <a href="mailto:myshop@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+            <!-- download : Lien vers le fichier PDF, il permet de télécharger le fichier -->
+            <a href="assets/PDF/Mentions légales.pdf" download>Mentions Légales</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

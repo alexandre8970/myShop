@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop - Inscription</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>MyShop</h1>
+        <h2>Ton équipement VTT, livré pour l’aventure.</h2>
+        <nav>
+            <!-- créer une liste non ordonnée -->
+            <ul>
+                <li>
+                    <a href="../index.html">Acceuil</a>
+                </li>
+                <li>
+                    <a href="about.html">A propos</a>
+                </li>
+                <li>
+                    <a href="products.html">Produits</a>
+                </li>
+                <li>
+                    <a href="signup.html">Inscription</a>
+                </li>
+                <li>
+                    <a href="signin.html">Connexion</a>
+                </li>
+                <li>
+                    <a href="cart.html">Panier<a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- action : URL du script qui traitera les données du formulaire -->
+        <!-- method : méthode HTTP utilisée pour envoyer les données du formulaire (GET/POST) -->
+        <!-- GET : récupère les données du formulaire et les envoie dans l'URL (moins sécurisé) -->
+        <!-- POST : envoie les données du formulaire dans le corps de la requête HTTP (plus sécurisé) -->
+        <form class="form">
+            <h2>Inscription</h2>
+            <p>Veuillez remplir le formulaire ci-dessous pour créer un compte.</p>
+
+            <!-- Boite spéciale pour regrouper des champs de formulaire liés -->
+            <fieldset class="signup-fieldset">
+                <!-- Titre de cette boite -->
+                <legend class="signup-legend">Informations Personnelles</legend>
+
+                <div>
+                    <!-- for : attribut qui lie le label à l'input -->
+                    <!-- id : identifiant unique de l'input -->
+                    <!-- for et id travaillent ensemble pour relier le label à l'input -->
+                    <label for="nom">Nom :</label>
+                    <input type="text" class="nom" id="nom" placeholder="Votre Nom" required>
+                </div>
+
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" placeholder="exemple@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="pwd">Mot de passe :</label>
+                    <input type="password" id="pwd" placeholder="Votre mot de passe" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="signup-fieldset">
+                <legend class="signup-legend">Informations supplémentaires</legend>
+                <div>
+                    <!-- Radio -->
+                    <label>Genre :</label>
+
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Homme</label>
+
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Femme</label>
+                </div>
+
+                <div>
+                    <!-- checkbox -->
+                    <label>Intérets :</label>
+                    <input type="checkbox" id="vetements" name="interests" value="vetements">
+                    <label for="vetements">Vêtements</label>
+
+                    <input type="checkbox" id="Accessoires" name="interests" value="Accessoires">
+                    <label for="Accessoires">Accessoires</label>
+
+                    <input type="checkbox" id="Sports" name="interests" value="Sports">
+                    <label for="Sports">Sports</label>
+                </div>
+
+                <div>
+                    <!-- liste déroulante -->
+                    <label for="country">Pays :</label>
+                    <select id="country" name="country" required>
+                        <option value="">Sélectionnez votre pays</option>
+                        <option value="france">France</option>
+                        <option value="belgique">Belgique</option>
+                        <option value="suisse">Suisse</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit">S'inscrire</button>
+            <p>Vous avez déjà un compte ? <a href="../pages/connexion.html">Connectez-vous</a></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Shop. Tous droits réservés. &copy;</p>
+
+        <!-- Liens vers les réseaux sociaux : facebook, twitter, instagram -->
+        <div>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.x.com" target="_blank">X</a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <!-- tel : Lien vers le téléphone, il permet de passer un appel directement depuis le site -->
+            <a href="tel:0312345678" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <!-- mailto : Lien vers l'email, il permet d'envoyer un email directement depuis le site -->
+            <a href="mailto:myshop@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+            <!-- download : Lien vers le fichier PDF, il permet de télécharger le fichier -->
+            <a href="assets/PDF/Mentions légales.pdf" download>Mentions Légales</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
