@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(223, 223, 223, 0.725);
 }
 
@@ -21,15 +21,17 @@ body {
     border: 5px solid
 } */
 /* Header Footer */
-header , footer {
-    background-color: #1e40af;
+header,
+footer {
+    background-color: #606164;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
 /* pour les "a" qui sont enfants de "header" */
-header a , footer a{
+header a,
+footer a {
     color: white;
     text-decoration: none;
 }
@@ -102,7 +104,7 @@ section {
     margin-bottom: 5px;
 }
 
-input [type="text"], 
+input [type="text"],
 input [type="email"],
 input [type=password],
 textarea,
@@ -131,7 +133,97 @@ button {
     display: block;
     margin: 0 auto;
     margin-bottom: 5px;
-    }
+}
+
+
+/* Les articles produits */
+.product-card {
+    background-color: #ececec;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.product-card p span {
+    color: #f29831;
+    font-weight: bold;
+}
+
+.product-card p {
+    margin: 10px 0;
+}
+
+.product-card img {
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+}
+
+.product-card p:last-of-type {
+    color: darkred;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.product-card button {
+    background-color: darkblue;
+    border: none;
+}
+
+/* tt p enfant de l'élément HTML ayant class product-card */
+/* .product-card p {
+    color: green;
+} */
+
+/* <p> enfants directs de l'élément HTML ayant class product-card */
+/* .product-card > p {
+    color: aqua;
+} */
+
+/* <p> frère directement suivant de l'élément HTML ayant class product-card */
+/* .product-card + p {
+    color: yellow;
+} */
+
+/* Quand la souris passe dessus */
+button:hover {
+    background-color: #1ac3e0;
+    color: black;
+    font-size: 20px;
+}
+
+/* quand l'utilisateur sélectionne un élément*/
+input:focus {
+    border: 2px solid orange;
+    outline: none;
+}
+button:focus {
+    border: 2px solid orange;
+}
+
+/* Pendant le clic */
+button:active {
+    background-color: red;
+    font-size: 10px;
+}
+
+/* le conteneur flex */
+.product-container {
+    /* la propriété pricipale du Flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 
 
@@ -142,7 +234,7 @@ button {
 
 /* .titre-presentation{ */
 /* padding: 10px 15px 20px 5px; */
-    /* padding-top: 10px;
+/* padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 20px;
     padding-left: 5px; */
