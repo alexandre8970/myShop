@@ -20,19 +20,44 @@ body {
     padding: 20px;
     border: 5px solid
 } */
+
+header {
+    /* la propriété principale de Flexbox */
+    display: flex;
+    /*flex-direction :row; */
+    /* height: 1500px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*center les éléments sur l'axe principale = axe horizontal */
+    align-items: center;
+    /*  center les éléments sur l'axe secondaire = axe vertical */
+    margin: 0 100px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+
+header h2 {
+    margin: 20px 0;
+}
+
 /* Header Footer */
-header,
-footer {
-    background-color: #606164;
+header, footer {
+    background-color: grey;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
+
 /* pour les "a" qui sont enfants de "header" */
-header a,
-footer a {
-    color: white;
+header a, footer a {
+    color: black;
     text-decoration: none;
 }
 
@@ -40,13 +65,9 @@ h2 {
     text-align: center;
 }
 
-header ul {
-    list-style: none;
-}
-
 img {
     width: 200px;
-    height: auto;
+    height: 150px;
 }
 
 table img {
@@ -83,7 +104,7 @@ section {
 }
 
 .signup-fieldset {
-    border: 1px solid grey;
+    border: 1px solid rgb(175, 171, 171);
     padding: 15px 50px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -92,7 +113,6 @@ section {
 .signup-legend {
     font-weight: bold;
     padding: 5px;
-
 }
 
 .form div {
@@ -104,19 +124,19 @@ section {
     margin-bottom: 5px;
 }
 
-input [type="text"],
-input [type="email"],
-input [type=password],
+input[type="text"],
+input[type="email"],
+input[type="password"],
 textarea,
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid grey;
+    border: 1px solid rgb(175, 171, 171);
     border-radius: 5px;
 }
 
 #nom {
-    border: 2px dotted red
+    border: 2px dotted red;
 }
 
 input[type="radio"],
@@ -125,14 +145,13 @@ input[type="checkbox"] {
 }
 
 button {
-    background-color: blue;
-    color: white;
-    padding: 10px;
+    background-color: grey;
+    color: black;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    margin-bottom: 5px;
 }
 
 
@@ -140,11 +159,11 @@ button {
 .product-card {
     background-color: #ececec;
     width: 300px;
-    height: auto;
+    height: 450px;
     margin: 20px;
     padding: 15px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .product-card h3 {
@@ -163,69 +182,134 @@ button {
 
 .product-card img {
     width: 200px;
-    height: auto;
+    height: 200px;
     padding: 5px;
-    border: 1px solid #d7d7d7;
-    border-radius: 10px;
+    border: 2px solid #d7d7d7;
+    border-radius: 5px;
 }
 
 .product-card p:last-of-type {
-    color: darkred;
+    /* color: darkred; */
     font-weight: 900;
     font-size: 20px;
 }
 
 .product-card button {
-    background-color: darkblue;
+    background-color: grey;
     border: none;
 }
 
-/* tt p enfant de l'élément HTML ayant class product-card */
+/* n'importe quel p à l'intérieur de lélément HTML ayant class product-card */
 /* .product-card p {
     color: green;
 } */
 
-/* <p> enfants directs de l'élément HTML ayant class product-card */
+/* <p> enfants directs de lélément HTML ayant class product-card */
 /* .product-card > p {
     color: aqua;
 } */
 
-/* <p> frère directement suivant de l'élément HTML ayant class product-card */
+/* le + pour indiquer "élément frère directement suivant */
 /* .product-card + p {
     color: yellow;
 } */
 
-/* Quand la souris passe dessus */
-button:hover {
-    background-color: #1ac3e0;
-    color: black;
-    font-size: 20px;
+/* Tableau */
+.table-container {
+    border: 2px solid grey;
+    border-radius: 10px;
+    /* overflow: hidden;*/
+    /*  cacher ce qui dépasse */
+    overflow-x: auto;
+    /* Si le contenu est trop large horizontalement, permet à l'utilisateur de le faire défiler  */
 }
 
-/* quand l'utilisateur sélectionne un élément*/
+table {
+    /* Permet de fusionner les bordures des cellules d'un tableau */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: antiquewhite;
+}
+
+th,
+td {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+
+/* thead th:first-child{
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child{
+    border-top-left-radius: 10px;
+} */
+
+
+/* Quand la souris passe dessus */
+button:hover {
+    background-color: #f29831;
+    color: black;
+    font-size: 15px;
+}
+
+/* Quand l'utilisateur sélectionne un élement */
 input:focus {
     border: 2px solid orange;
     outline: none;
 }
+
 button:focus {
-    border: 2px solid orange;
+    background-color: yellow;
 }
 
-/* Pendant le clic */
+/* pendant le clic */
 button:active {
-    background-color: red;
+    /* background-color: red; */
     font-size: 10px;
 }
 
-/* le conteneur flex */
-.product-container {
-    /* la propriété pricipale du Flexbox */
+/* Le conteneur flex */
+/* Aligner les produits horizontalement */
+/* .product-container { */
+    /* la propriété principale de Flexbox */
+    /* display: flex; */
+    /*flex-direction :row; */
+    /* height: 1500px; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    /*center les éléments sur l'axe principale = axe horizontal */
+    /* align-items: center; */
+    /*  center les éléments sur l'axe secondaire = axe vertical */
+    /* flex-direction: column; */
+/* } */
+
+.categorie-container {
+    /* la propriété principale de Flexbox */
     display: flex;
+    /*flex-direction :row; */
+    /* height: 1500px; */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    /*center les éléments sur l'axe principale = axe horizontal */
+    align-items: center;
+    /*  center les éléments sur l'axe secondaire = axe vertical */
+
 }
 
-
+/* Aligner les produits verticalement */
+/* .products-container { */
+/* la propriété principale de Flexbox */
+/* display: flex; */
+/* height: 1500px; */
+/* flex-direction: column;Choisir la direction des éléments : colonne */
+/* justify-content: center;  center les éléments sur l'axe principale = axe vertical */
+/* align-items: center; center les éléments sur l'axe secondaire = axe horizontal */
+/* } */
 
 /* .products-list h2 {
     color: red;
@@ -244,3 +328,28 @@ border-style: dashed;
 border-color: #1e40af; */
 /* margin: 50px; */
 /* } */
+
+/* Flexbox */
+/* .product-container {
+    display: flex;
+    align-items: center;
+} */
+
+/* grid css */
+.product-container {
+    display: grid;
+    /* Découper ligne en morceaux */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 20px; */
+    /* Dépplacer la grille entière */
+    justify-content: center;
+    align-content: center;
+    /* poitionner les éléments dans leurs cellules */
+    justify-items: center;
+    align-items: center;
+}
+
+/* .prod1 {
+ align-self: flex-end;
+} */

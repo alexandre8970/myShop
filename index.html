@@ -83,15 +83,28 @@
             </p>
         </section>
 
-        <section>
+        <section class="categories">
             <h2 class="titre-presentation" id="categories">Catégories</h2>
             <!-- Liste ordonnée -->
-            <ol>
-                <li>Femme</li>
-                <li>Homme</li>
-                <li>Enfants</li>
-                <li>Equipement</li>
-            </ol>
+                <ol class="categorie-container">
+                    <li>
+                        <img src="assets/images/femmes.jpg" alt="Catégorie Femmes">
+                        <button type="button">Femmes</button>
+                    </li>
+                    <li>
+                        <img src="assets/images/hommes.webp" alt="Catégorie Hommes">
+                        <button type="button">Hommes</button>
+                    </li>
+                    <li>
+                        <img src="assets/images/enfnats.avif" alt="Catégorie Enfants">
+                        <button type="button">Enfants</button>
+                    </li>
+                    <li>
+                        <img src="assets/images/equipements.webp" alt="Catégorie Equipements">
+                        <button type="button">Equipements</button>
+                    </li>
+                </ol>
+
         </section>
         <!-- Liste de définitions -->
         <!-- <dl> -->
@@ -108,7 +121,7 @@
         <section class="products-list">
             <h2 id="products">Nos produits</h2>
 
-            <div class="product-container">
+            <div class="product-container prod1">
                 <article class="product-card">
                     <h3>Maillot manche courte femme</h3>
                     <p>Ce produit est <span>fortement recommandé</span> par nos clients</p>
@@ -210,9 +223,10 @@
             </div>
 
             <!-- Liste des produits dans un tableau -->
-            <table border="1">
+             <div class="table-container">
+            <table>
                 <!-- Légende du tableau -->
-                <caption>Liste des produits</caption>
+                <!-- <caption>Liste des produits</caption> -->
                 <!-- En-tête du tableau -->
                 <thead>
                     <!-- Ligne du tableau -->
@@ -342,6 +356,7 @@
 
                 </tbody>
             </table>
+            </div>
         </section>
 
         <!-- Contenu complementaire -->
@@ -360,13 +375,13 @@
 
         <!-- Liens vers les réseaux sociaux : facebook, twitter, instagram -->
         <div>
-            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="icon fa-brands fa-square-facebook"></i></a>
             <a href="https://www.x.com" target="_blank">X</a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="icon fa-brands fa-instagram"></i></a>
             <!-- tel : Lien vers le téléphone, il permet de passer un appel directement depuis le site -->
-            <a href="tel:0312345678" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="tel:0312345678" target="_blank"><i class="icon fa-solid fa-phone"></i></a>
             <!-- mailto : Lien vers l'email, il permet d'envoyer un email directement depuis le site -->
-            <a href="mailto:myshop@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+            <a href="mailto:myshop@gmail.com" target="_blank"><i class="icon fa-regular fa-envelope"></i></a>
             <!-- download : Lien vers le fichier PDF, il permet de télécharger le fichier -->
             <a href="assets/PDF/Mentions légales.pdf" download>Mentions Légales</a>
         </div>
