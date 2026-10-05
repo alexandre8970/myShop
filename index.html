@@ -86,24 +86,24 @@
         <section class="categories">
             <h2 class="titre-presentation" id="categories">Catégories</h2>
             <!-- Liste ordonnée -->
-                <ol class="categorie-container">
-                    <li>
-                        <img src="assets/images/femmes.jpg" alt="Catégorie Femmes">
-                        <button type="button">Femmes</button>
-                    </li>
-                    <li>
-                        <img src="assets/images/hommes.webp" alt="Catégorie Hommes">
-                        <button type="button">Hommes</button>
-                    </li>
-                    <li>
-                        <img src="assets/images/enfnats.avif" alt="Catégorie Enfants">
-                        <button type="button">Enfants</button>
-                    </li>
-                    <li>
-                        <img src="assets/images/equipements.webp" alt="Catégorie Equipements">
-                        <button type="button">Equipements</button>
-                    </li>
-                </ol>
+            <ul class="categories-container">
+                <li class="categories-card">
+                    <img src="assets/images/femmes.jpg" alt="Catégorie Femmes">
+                    <button type="button">Femmes</button>
+                </li>
+                <li class="categories-card">
+                    <img src="assets/images/hommes.webp" alt="Catégorie Hommes">
+                    <button type="button">Hommes</button>
+                </li>
+                <li class="categories-card">
+                    <img src="assets/images/enfnats.avif" alt="Catégorie Enfants">
+                    <button type="button">Enfants</button>
+                </li>
+                <li class="categories-card">
+                    <img src="assets/images/equipements.webp" alt="Catégorie Equipements">
+                    <button type="button">Equipements</button>
+                </li>
+            </ul>
 
         </section>
         <!-- Liste de définitions -->
@@ -123,6 +123,7 @@
 
             <div class="product-container prod1">
                 <article class="product-card">
+                    <span class="badge">PROMO</span>
                     <h3>Maillot manche courte femme</h3>
                     <p>Ce produit est <span>fortement recommandé</span> par nos clients</p>
                     <img src="assets/images/maillot-mc-femme-2.jpg" alt="Maillot manche courte femme">
@@ -223,139 +224,139 @@
             </div>
 
             <!-- Liste des produits dans un tableau -->
-             <div class="table-container">
-            <table>
-                <!-- Légende du tableau -->
-                <!-- <caption>Liste des produits</caption> -->
-                <!-- En-tête du tableau -->
-                <thead>
-                    <!-- Ligne du tableau -->
-                    <tr>
-                        <!-- th : Cellule d'en-tête -->
-                        <th>Catégorie</th>
-                        <th>Produit</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                        <th>Prix</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+            <div class="table-container">
+                <table>
+                    <!-- Légende du tableau -->
+                    <!-- <caption>Liste des produits</caption> -->
+                    <!-- En-tête du tableau -->
+                    <thead>
+                        <!-- Ligne du tableau -->
+                        <tr>
+                            <!-- th : Cellule d'en-tête -->
+                            <th>Catégorie</th>
+                            <th>Produit</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Prix</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                <!-- Corps du tableau -->
-                <tbody>
+                    <!-- Corps du tableau -->
+                    <tbody>
 
-                    <!-- FEMME -->
-                    <tr>
-                        <td rowspan="4">Femme</td>
-                        <td>Maillot manche courte femme</td>
-                        <td><img src="assets/images/maillot-mc-femme-2.jpg" alt="Maillot manche courte femme"
-                                width="100"></td>
-                        <td>Maillot manche courte femme.</td>
-                        <td>49,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <!-- FEMME -->
+                        <tr>
+                            <td rowspan="4">Femme</td>
+                            <td>Maillot manche courte femme</td>
+                            <td><span class="badge-table">PROMO</span><img src="assets/images/maillot-mc-femme-2.jpg" alt="Maillot manche courte femme"
+                                    width="100"></td>
+                            <td>Maillot manche courte femme.</td>
+                            <td>49,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Short femme 1</td>
-                        <td><img src="assets/images/short-femme-1.jpg" alt="Short femme 1" width="100"></td>
-                        <td>Short femme 1.</td>
-                        <td>59,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Short femme 1</td>
+                            <td><img src="assets/images/short-femme-1.jpg" alt="Short femme 1" width="100"></td>
+                            <td>Short femme 1.</td>
+                            <td>59,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Maillot manches longues femme</td>
-                        <td><img src="assets/images/maillot-ml-femme-1.jpg" alt="Maillot manches longues femme"
-                                width="100"></td>
-                        <td>Maillot manches longues femme.</td>
-                        <td>19,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Maillot manches longues femme</td>
+                            <td><img src="assets/images/maillot-ml-femme-1.jpg" alt="Maillot manches longues femme"
+                                    width="100"></td>
+                            <td>Maillot manches longues femme.</td>
+                            <td>19,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Short femme 2</td>
-                        <td><img src="assets/images/short-femme-2.webp" alt="Short femme 2" width="100"></td>
-                        <td>Short femme 2.</td>
-                        <td>49,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
-
-
-                    <!-- HOMME -->
-                    <tr>
-                        <td rowspan="4">Homme</td>
-                        <td>Maillot manche courte homme</td>
-                        <td><img src="assets/images/maillot-mc-homme-2.webp" alt="Maillot manche courte homme"
-                                width="100"></td>
-                        <td>Maillot manche courte homme.</td>
-                        <td>39,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Short Homme 1</td>
-                        <td><img src="assets/images/short-homme-1.jpg" alt="Short homme 1" width="100"></td>
-                        <td>Short Homme 1.</td>
-                        <td>29,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Maillot manches longues homme</td>
-                        <td><img src="assets/images/maillot-ml-homme-1.jpg" alt="Maillot manches longues homme"
-                                width="100"></td>
-                        <td>Maillot manches longues homme.</td>
-                        <td>29,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Short homme 2</td>
-                        <td><img src="assets/images/short-homme-2.jpg" alt="Short homme 2" width="100"></td>
-                        <td>Short homme 2.</td>
-                        <td>39,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Short femme 2</td>
+                            <td><img src="assets/images/short-femme-2.webp" alt="Short femme 2" width="100"></td>
+                            <td>Short femme 2.</td>
+                            <td>49,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
 
-                    <!-- ENFANT -->
-                    <tr>
-                        <td rowspan="4">Enfant</td>
-                        <td>Maillot manches longues enfant 1</td>
-                        <td><img src="assets/images/maillot-ml-enfant-1.jpg" alt="Maillot manches longues enfant 1"
-                                width="100"></td>
-                        <td>Maillot manches longues enfant 1.</td>
-                        <td>29,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <!-- HOMME -->
+                        <tr>
+                            <td rowspan="4">Homme</td>
+                            <td>Maillot manche courte homme</td>
+                            <td><img src="assets/images/maillot-mc-homme-2.webp" alt="Maillot manche courte homme"
+                                    width="100"></td>
+                            <td>Maillot manche courte homme.</td>
+                            <td>39,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Maillot manches courtes enfant 1</td>
-                        <td><img src="assets/images/maillot-mc-enfant-2.jpg" alt="Maillot manches courtes enfant 1"
-                                width="100"></td>
-                        <td>Maillot manches courtes enfant 1.</td>
-                        <td>59,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Short Homme 1</td>
+                            <td><img src="assets/images/short-homme-1.jpg" alt="Short homme 1" width="100"></td>
+                            <td>Short Homme 1.</td>
+                            <td>29,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Short enfant 1</td>
-                        <td><img src="assets/images/short-enfant-1.jpg" alt="Short enfant 1" width="100"></td>
-                        <td>Short enfant 1.</td>
-                        <td>19,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Maillot manches longues homme</td>
+                            <td><img src="assets/images/maillot-ml-homme-1.jpg" alt="Maillot manches longues homme"
+                                    width="100"></td>
+                            <td>Maillot manches longues homme.</td>
+                            <td>29,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Short enfant 2</td>
-                        <td><img src="assets/images/short-enfant-2.jpg" alt="Short enfant 2" width="100"></td>
-                        <td>Short enfant 2.</td>
-                        <td>29,99 €</td>
-                        <td><button type="button">Ajouter au panier</button></td>
-                    </tr>
+                        <tr>
+                            <td>Short homme 2</td>
+                            <td><img src="assets/images/short-homme-2.jpg" alt="Short homme 2" width="100"></td>
+                            <td>Short homme 2.</td>
+                            <td>39,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
 
-                </tbody>
-            </table>
+
+                        <!-- ENFANT -->
+                        <tr>
+                            <td rowspan="4">Enfant</td>
+                            <td>Maillot manches longues enfant 1</td>
+                            <td><img src="assets/images/maillot-ml-enfant-1.jpg" alt="Maillot manches longues enfant 1"
+                                    width="100"></td>
+                            <td>Maillot manches longues enfant 1.</td>
+                            <td>29,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Maillot manches courtes enfant 1</td>
+                            <td><img src="assets/images/maillot-mc-enfant-2.jpg" alt="Maillot manches courtes enfant 1"
+                                    width="100"></td>
+                            <td>Maillot manches courtes enfant 1.</td>
+                            <td>59,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Short enfant 1</td>
+                            <td><img src="assets/images/short-enfant-1.jpg" alt="Short enfant 1" width="100"></td>
+                            <td>Short enfant 1.</td>
+                            <td>19,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Short enfant 2</td>
+                            <td><img src="assets/images/short-enfant-2.jpg" alt="Short enfant 2" width="100"></td>
+                            <td>Short enfant 2.</td>
+                            <td>29,99 €</td>
+                            <td><button type="button">Ajouter au panier</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -367,6 +368,7 @@
             </p>
         </aside>
 
+        <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
     </main>
 
     <!-- Pieds de page -->

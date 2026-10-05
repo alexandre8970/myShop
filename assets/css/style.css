@@ -27,15 +27,21 @@ header {
     /*flex-direction :row; */
     /* height: 1500px; */
     flex-wrap: wrap;
+    /* z-index gère l'ordre de profondeur */
+    z-index: 10;
     justify-content: space-between;
     /*center les éléments sur l'axe principale = axe horizontal */
     align-items: center;
     /*  center les éléments sur l'axe secondaire = axe vertical */
     margin: 0 100px;
+    /* coller header en haut de la page */
+    position: sticky;
+    top: 0;
 }
 
 header ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     gap: 20px;
 
@@ -47,7 +53,8 @@ header h2 {
 }
 
 /* Header Footer */
-header, footer {
+header,
+footer {
     background-color: grey;
     color: white;
     text-align: center;
@@ -56,7 +63,8 @@ header, footer {
 
 
 /* pour les "a" qui sont enfants de "header" */
-header a, footer a {
+header a,
+footer a {
     color: black;
     text-decoration: none;
 }
@@ -157,6 +165,7 @@ button {
 
 /* Les articles produits */
 .product-card {
+    position: relative;
     background-color: #ececec;
     width: 300px;
     height: 450px;
@@ -164,6 +173,17 @@ button {
     padding: 15px;
     text-align: center;
     border-radius: 5px;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .product-card h3 {
@@ -250,56 +270,71 @@ thead th:last-child{
 } */
 
 
-/* Quand la souris passe dessus */
-button:hover {
-    background-color: #f29831;
-    color: black;
-    font-size: 15px;
-}
 
-/* Quand l'utilisateur sélectionne un élement */
-input:focus {
-    border: 2px solid orange;
-    outline: none;
-}
-
-button:focus {
-    background-color: yellow;
-}
-
-/* pendant le clic */
-button:active {
-    /* background-color: red; */
-    font-size: 10px;
-}
 
 /* Le conteneur flex */
 /* Aligner les produits horizontalement */
 /* .product-container { */
-    /* la propriété principale de Flexbox */
-    /* display: flex; */
-    /*flex-direction :row; */
-    /* height: 1500px; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
-    /*center les éléments sur l'axe principale = axe horizontal */
-    /* align-items: center; */
-    /*  center les éléments sur l'axe secondaire = axe vertical */
-    /* flex-direction: column; */
+/* la propriété principale de Flexbox */
+/* display: flex; */
+/*flex-direction :row; */
+/* height: 1500px; */
+/* flex-wrap: wrap; */
+/* justify-content: space-evenly; */
+/*center les éléments sur l'axe principale = axe horizontal */
+/* align-items: center; */
+/*  center les éléments sur l'axe secondaire = axe vertical */
+/* flex-direction: column; */
 /* } */
 
-.categorie-container {
-    /* la propriété principale de Flexbox */
-    display: flex;
-    /*flex-direction :row; */
-    /* height: 1500px; */
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /*center les éléments sur l'axe principale = axe horizontal */
-    align-items: center;
-    /*  center les éléments sur l'axe secondaire = axe vertical */
 
+/* Conteneur Flexbox */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* permet le retour à la ligne */
+    gap: 20px;
+    /* espace homogène entre les éléments */
+    list-style: none;
+    /* supprime les puces de la liste */
 }
+
+/* Les cartes catégories */
+.categories-card {
+    background-color: #ececec;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.categories-card h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.categories-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+
+.categories-card button {
+    background-color: grey;
+    border: none;
+}
+
+.categories-card button:hover {
+    transform: scale(1.05);
+    background-color: #e94444;
+}
+
+
+
+
 
 /* Aligner les produits verticalement */
 /* .products-container { */
@@ -353,3 +388,31 @@ border-color: #1e40af; */
 /* .prod1 {
  align-self: flex-end;
 } */
+
+/* position des éléments */
+/* .titre-presentation {
+    position: relative;
+    top: 20px;
+    left: 30px;
+} */
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+td {
+    position: relative;
+}
+
+.badge-table {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+}
