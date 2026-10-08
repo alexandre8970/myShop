@@ -33,7 +33,7 @@ header {
     /*center les éléments sur l'axe principale = axe horizontal */
     align-items: center;
     /*  center les éléments sur l'axe secondaire = axe vertical */
-    margin: 0 100px;
+    margin: 10px 0px;
     /* coller header en haut de la page */
     position: sticky;
     top: 0;
@@ -56,7 +56,7 @@ header h2 {
 header,
 footer {
     background-color: grey;
-    color: white;
+    color: black;
     text-align: center;
     padding: 20px;
 }
@@ -67,6 +67,10 @@ header a,
 footer a {
     color: black;
     text-decoration: none;
+}
+
+.icon {
+  font-size: 40px; /* augmente la taille */
 }
 
 h2 {
@@ -167,7 +171,7 @@ button {
 .product-card {
     position: relative;
     background-color: #ececec;
-    width: 300px;
+    width: auto;
     height: 450px;
     margin: 20px;
     padding: 15px;
@@ -176,14 +180,14 @@ button {
 }
 
 .badge {
-    background-color: red;
+    background-color: darkred;
     color: white;
     padding: 5px;
     border-radius: 5px;
     font-weight: 900;
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: 0px;
 }
 
 .product-card h3 {
@@ -192,7 +196,7 @@ button {
 }
 
 .product-card p span {
-    color: #f29831;
+    color: #6e3e07;
     font-weight: bold;
 }
 
@@ -410,9 +414,25 @@ td {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: red;
+    background-color: darkred;
     color: white;
     padding: 5px;
     border-radius: 5px;
     font-weight: 900;
+}
+
+.carousel-img {
+    width: 60%; 
+    height: auto;
+    margin: auto; 
+}
+
+div a {
+  display: inline-flex;        /* permet de centrer l’icône */
+  align-items: center;
+  justify-content: center;
+  width: 44px;                 /* taille minimale recommandée */
+  height: 44px;
+  margin: 6px;                 /* espace entre les icônes */
+  text-decoration: none;
 }
