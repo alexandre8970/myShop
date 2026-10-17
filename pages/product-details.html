@@ -6,11 +6,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyShop</title>
+    <meta name="description"
+        content="MyShop est une boutique en ligne spécialisée dans la vente d'équipements de VTT pour femmes, hommes et enfants.">
+    <meta name="robots" content="index, follow">
+    <title>MyShop - Détails du produit</title>
 
     <!-- Lien bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -54,7 +56,7 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
-                 <li>
+                <li>
                     <a href="product-details.html">Détails du produit</a>
                 </li>
             </ul>
@@ -62,154 +64,231 @@
 
     </header>
 
-    <h2>Catégories</h2>
+    <main>
 
-    <ol>
-        <li>Femme</li>
-        <li>Homme</li>
-        <li>Enfants</li>
-    </ol>
+        <!-- SECTION 2 : Articles -->
+        <div class="row">
 
-    <section class="products-list">
-        <h2 id="products">Nos produits</h2>
+            <!-- Short Homme 1 -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Short ENDURA HUMMVEE LINER Moutarde</h3>
 
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-8">
-                    <article class="product-card">
-                        <span class="badge">PROMO</span>
-                        <h3>Maillot manche courte femme</h3>
-                        <p>Ce produit est <span>fortement recommandé</span> par nos clients</p>
-                        <img src="../assets/images/maillot-mc-femme-2.jpg" alt="Maillot manche courte femme">
-                        <p class="products">Maillot manche courte femme.</p>
-                        <p>Prix : <s>49,99€</s> 39,99€ €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Maillot manche courte homme</h3>
-                        <img src="../assets/images/maillot-mc-homme-2.webp" alt="Maillot manche courte homme">
-                        <p class="products">Maillot manche courte homme.</p>
-                        <p>Prix : 39,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+                    <div id="carousel-short-homme-1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/endura1.webp" class="d-block w-100"
+                                    alt="Short homme 1 - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/endura2.webp" class="d-block w-100"
+                                    alt="Short homme 1 - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/endura3.webp" class="d-block w-100"
+                                    alt="Short homme 1 - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-short-homme-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-short-homme-1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Short Homme 1.</p>
+                    <p>Prix : 29,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short Homme 1</h3>
-                        <img src="../assets/images/short-homme-1.jpg" alt="Short homme 1">
-                        <p class="products">Short Homme 1.</p>
-                        <p>Prix : 29,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short femme 1</h3>
-                        <img src="../assets/images/short-femme-1.jpg" alt="Short femme 1">
-                        <p class="products">Short femme 1.</p>
-                        <p>Prix : 59,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Maillot manches longues femme</h3>
-                        <img src="../assets/images/maillot-ml-femme-1.jpg" alt="Maillot manches longues femme">
-                        <p class="products">Maillot manches longues femme.</p>
-                        <p>Prix : 19,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+
+            <!-- Short Femme 1 -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Short ENDURA HUMMVEE DT Femme Vert</h3>
+
+                    <div id="carousel-short-femme-1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/enduraf1.webp" class="d-block w-100"
+                                    alt="Short femme 1 - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/enduraf2.webp" class="d-block w-100"
+                                    alt="Short femme 1 - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/enduraf3.webp" class="d-block w-100"
+                                    alt="Short femme 1 - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-short-femme-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-short-femme-1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Short femme 1.</p>
+                    <p>Prix : 59,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
-        </div>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-8">
-                    <article class="product-card">
-                        <h3>Maillot manches longues homme</h3>
-                        <img src="../assets/images/maillot-ml-homme-1.jpg" alt="Maillot manche longue Homme">
-                        <p class="products">Maillot manches longues pour Homme</pclass>
-                        </p>
-                        <p>Prix : 29,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short femme 2</h3>
-                        <img src="../assets/images/short-femme-2.webp" alt="Short femme">
-                        <p class="products">Short femme 2.</p>
-                        <p>Prix : 49,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+
+            <!-- Maillot ML Femme -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Maillot manches longues femme</h3>
+
+                    <div id="carousel-maillot-ml-femme" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/maillot-ml-femme-1.jpg" class="d-block w-100"
+                                    alt="Maillot ML femme - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/maillot-mc-femme-2.jpg" class="d-block w-100"
+                                    alt="Maillot ML femme - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/short-femme-2.webp" class="d-block w-100"
+                                    alt="Maillot ML femme - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-maillot-ml-femme"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-maillot-ml-femme"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Maillot manches longues femme.</p>
+                    <p>Prix : 19,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short homme 2</h3>
-                        <img src="../assets/images/short-homme-2.jpg" alt="Short homme 2">
-                        <p class="products">Short homme 2.</p>
-                        <p>Prix : 39,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short enfant 2</h3>
-                        <img src="../assets/images/short-enfant-2.jpg" alt="Short enfant 2">
-                        <p class="products">Short enfant 2.</p>
-                        <p>Prix : 29,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Maillot manches longues enfant 2</h3>
-                        <img src="../assets/images/maillot-ml-enfant-2.jpg" alt="Maillot manches longues enfant 2">
-                        <p class="products">Maillot manches longues enfant 2.</p>
-                        <p>Prix : 39,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+
+            <!-- Short Homme 1 -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Short Homme 1</h3>
+
+                    <div id="carousel-short-homme-2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/short-homme-1.jpg" class="d-block w-100"
+                                    alt="Short homme 1 - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/short-homme-2.jpg" class="d-block w-100"
+                                    alt="Short homme 1 - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/short-enfant-2.jpg" class="d-block w-100"
+                                    alt="Short homme 1 - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-short-homme-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-short-homme-1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Short Homme 1.</p>
+                    <p>Prix : 29,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
-        </div>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-8">
-                    <article class="product-card">
-                        <h3>Maillot manches courtes enfant 1</h3>
-                        <img src="../assets/images/maillot-mc-enfant-2.jpg" alt="Maillot manches courtes enfant1">
-                        <p class="products">Maillot manches courtes enfant 1.</p>
-                        <p>Prix : 59,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short enfant 1</h3>
-                        <img src="../assets/images/short-enfant-1.jpg" alt="Short enfant 1">
-                        <p class="products">Short enfant 1.</p>
-                        <p>Prix : 19,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+
+            <!-- Short Femme 1 -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Short femme 1</h3>
+
+                    <div id="carousel-short-femme-2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/short-femme-1.jpg" class="d-block w-100"
+                                    alt="Short femme 1 - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/short-femme-2.webp" class="d-block w-100"
+                                    alt="Short femme 1 - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/maillot-ml-femme-1.jpg" class="d-block w-100"
+                                    alt="Short femme 1 - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-short-femme-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-short-femme-1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Short femme 1.</p>
+                    <p>Prix : 59,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <article class="product-card">
-                        <h3>Short enfant 02</h3>
-                        <img src="../assets/images/short-enfant-2.jpg" alt="Short enfant 2">
-                        <p class="products">Short enfant 02</pclass>
-                        </p>
-                        <p>Prix : 29,99 €</p>
-                        <button type="button">Ajouter au panier</button>
-                    </article>
-                </div>
+
+            <!-- Maillot ML Femme -->
+            <div class="col-6">
+                <article class="product-card">
+                    <h3>Maillot manches longues femme</h3>
+
+                    <div id="carousel-maillot-ml-femme-2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/maillot-ml-femme-1.jpg" class="d-block w-100"
+                                    alt="Maillot ML femme - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/maillot-mc-femme-2.jpg" class="d-block w-100"
+                                    alt="Maillot ML femme - 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/short-femme-2.webp" class="d-block w-100"
+                                    alt="Maillot ML femme - 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-maillot-ml-femme"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-maillot-ml-femme"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p class="products">Maillot manches longues femme.</p>
+                    <p>Prix : 19,99 €</p>
+                    <button type="button">Ajouter au panier</button>
+                </article>
             </div>
         </div>
 
@@ -348,17 +427,16 @@
                 </tbody>
             </table>
         </div>
-    </section>
 
-    <!-- Contenu complementaire -->
-    <aside>
-        <h2>Promotions</h2>
-        <p>
-            <mark><i>-20% sur tous les articles !</i></mark>
-        </p>
-    </aside>
+        <!-- Contenu complementaire -->
+        <aside>
+            <h2>Promotions</h2>
+            <p>
+                <mark><i>-20% sur tous les articles !</i></mark>
+            </p>
+        </aside>
 
-    <button class="scroll-top" aria-label="retour en haut de page"><i class="fas fa-arrow-up"></i></button>
+        <button class="scroll-top" aria-label="retour en haut de page"><i class="fas fa-arrow-up"></i></button>
 
     </main>
 
@@ -381,7 +459,7 @@
             <a href="mailto:myshop@gmail.com" target="_blank" aria-label="Contactez-nous"><i
                     class="icon fa-regular fa-envelope"></i></a>
             <!-- download : Lien vers le fichier PDF, il permet de télécharger le fichier -->
-            <a href="assets/PDF/Mentions légales.pdf" download aria-label="Télécharger les mentions légales">Mentions
+            <a href="assets/PDF/Mentions-légales.pdf" download aria-label="Télécharger les mentions-légales">Mentions
                 Légales</a>
         </div>
     </footer>

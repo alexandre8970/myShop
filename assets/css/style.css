@@ -1,16 +1,21 @@
+/* -----------------------------------
+   RESET & BASE
+----------------------------------- */
 /* Sélécteur universel : sélectionne tous les éléments HTML de la page */
 /* rénitialisation (reset) du site */
 * {
     margin: 0;
     padding: 0;
-    /* Gérer correctement la taille */
+      /* Gérer correctement la taille */
     /* l'élément Div avec 300px du width : il correspond à la larguer totale de l'élément, bordure et padding compris */
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(223, 223, 223, 0.725);
+    background-color: #e1e1e1;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* content-box : Comprtement du CSS par défaut */
@@ -21,65 +26,71 @@ body {
     border: 5px solid
 } */
 
-header {
-    /* la propriété principale de Flexbox */
-    display: flex;
-    /*flex-direction :row; */
-    /* height: 1500px; */
-    flex-wrap: wrap;
-    /* z-index gère l'ordre de profondeur */
-    z-index: 10;
-    justify-content: space-between;
-    /*center les éléments sur l'axe principale = axe horizontal */
-    align-items: center;
-    /*  center les éléments sur l'axe secondaire = axe vertical */
-    margin: 10px 0px;
-    /* coller header en haut de la page */
-    position: sticky;
-    top: 0;
-}
-
-header ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 20px;
-
-}
-
-
-header h2 {
-    margin: 20px 0;
-}
-
-/* Header Footer */
-header,
-footer {
+/* -----------------------------------
+   HEADER & FOOTER
+----------------------------------- */
+header, footer {
     background-color: grey;
     color: black;
     text-align: center;
     padding: 20px;
 }
 
+header {
+     /* la propriété principale de Flexbox */
+    display: flex;
+    justify-content: space-between;
+    /*center les éléments sur l'axe principale = axe horizontal */
+    align-items: center;
+     /*flex-direction :row; */
+    /* height: 1500px; */
+    flex-wrap: wrap;
+    /* coller header en haut de la page */
+    position: sticky;
+    top: 0;
+      /* z-index gère l'ordre de profondeur */
+    z-index: 10;
+      /*  center les éléments sur l'axe secondaire = axe vertical */
+    margin-bottom: 10px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 
 /* pour les "a" qui sont enfants de "header" */
-header a,
-footer a {
+header a, footer a {
     color: black;
     text-decoration: none;
 }
 
 .icon {
-  font-size: 40px; /* augmente la taille */
+     /* augmente la taille */
+    font-size: 40px;
 }
 
-h2 {
-    text-align: center;
+div a {
+    display: inline-flex;
+    /* permet de centrer l’icône */
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    /* taille minimale recommandée */
+    height: 44px;
+    margin: 6px;
+    /* espace entre les icônes */
+    text-decoration: none;
 }
 
+/* -----------------------------------
+   GLOBAL IMAGES
+----------------------------------- */
 img {
     width: 200px;
     height: 150px;
+    object-fit: cover;
 }
 
 table img {
@@ -87,10 +98,11 @@ table img {
     height: auto;
 }
 
-/* main */
-
+/* -----------------------------------
+   MAIN CONTAINER
+----------------------------------- */
 main {
-    /* une limite maximale, pas une largeur obligatoire */
+     /* une limite maximale, pas une largeur obligatoire */
     max-width: 1200px;
     padding: 20px;
     margin: 0 auto;
@@ -103,20 +115,47 @@ section {
     border-radius: 10px;
 }
 
+/* -----------------------------------
+   BANNER
+----------------------------------- */
+.banner {
+    height: 600px;
+    background: url('../images/slider-bg.jpg') center/cover no-repeat;
+}
+
+.banner h2 {
+    color: #d86800;
+    font-size: 40px;
+    text-align: left;
+}
+
+.banner a {
+    display: inline-block;
+    background-color: #d86800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* -----------------------------------
+   FORMULAIRE
+----------------------------------- */
 /* Formulaire : Inscription/connexion/contact */
 .form {
     background-color: white;
     padding: 20px;
     max-width: 500px;
-    /* 20px => marge en haut et en bas (axe vertical) */
+     /* 20px => marge en haut et en bas (axe vertical) */
     /* auto => navigateru calcule auto les marges gauche/droite pour centrer l'élément horizontalement */
     margin: 20px auto;
-    border: 1px solid rgb(175, 171, 171);
+    border: 1px solid #b0b0b0;
     border-radius: 10px;
 }
 
 .signup-fieldset {
-    border: 1px solid rgb(175, 171, 171);
+    border: 1px solid #b0b0b0;
     padding: 15px 50px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -143,13 +182,13 @@ textarea,
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid rgb(175, 171, 171);
+    border: 1px solid #b0b0b0;
     border-radius: 5px;
 }
 
-#nom {
+/* #nom {
     border: 2px dotted red;
-}
+} */
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -166,54 +205,43 @@ button {
     margin: 0 auto;
 }
 
-
-/* Les articles produits */
+/* -----------------------------------
+   PRODUCT CARDS
+----------------------------------- */
 .product-card {
-    position: relative;
     background-color: #ececec;
-    width: auto;
-    height: 450px;
-    margin: 20px;
     padding: 15px;
+    margin: 20px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
 }
 
-.badge {
-    background-color: darkred;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: 900;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.product-card:hover {
+    transform: translateY(-4px);
 }
 
 .product-card h3 {
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.product-card p span {
-    color: #6e3e07;
-    font-weight: bold;
+.product-card img {
+    width: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #d7d7d7;
+    margin-bottom: 10px;
 }
 
 .product-card p {
     margin: 10px 0;
 }
 
-.product-card img {
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-    border: 2px solid #d7d7d7;
-    border-radius: 5px;
-}
-
 .product-card p:last-of-type {
-    /* color: darkred; */
+     /* color: darkred; */
     font-weight: 900;
     font-size: 20px;
 }
@@ -221,6 +249,8 @@ button {
 .product-card button {
     background-color: grey;
     border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 /* n'importe quel p à l'intérieur de lélément HTML ayant class product-card */
@@ -238,31 +268,64 @@ button {
     color: yellow;
 } */
 
-/* Tableau */
+/* Badge promo */
+.badge {
+    background-color: darkred;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* -----------------------------------
+   CAROUSEL
+----------------------------------- */
+.carousel {
+    margin-bottom: 15px;
+}
+
+.carousel-inner img {
+    width: 80%;
+    height: 300px;
+    /* object-fit: cover; */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* -----------------------------------
+   TABLEAU
+----------------------------------- */
 .table-container {
     border: 2px solid grey;
     border-radius: 10px;
     /* overflow: hidden;*/
-    /*  cacher ce qui dépasse */
+    /* cacher ce qui dépasse */
     overflow-x: auto;
     /* Si le contenu est trop large horizontalement, permet à l'utilisateur de le faire défiler  */
+    margin-top: 30px;
 }
 
 table {
-    /* Permet de fusionner les bordures des cellules d'un tableau */
-    border-collapse: collapse;
+     /* Permet de fusionner les bordures des cellules d'un tableau */
     width: 100%;
+    border-collapse: collapse;
 }
 
 thead {
     background-color: antiquewhite;
 }
 
-th,
-td {
+th, td {
     border: 1px solid grey;
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 
 /* thead th:first-child{
@@ -273,8 +336,20 @@ thead th:last-child{
     border-top-left-radius: 10px;
 } */
 
+.badge-table {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: darkred;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+}
 
-
+/* -----------------------------------
+   CATEGORIES
+----------------------------------- */
 
 /* Le conteneur flex */
 /* Aligner les produits horizontalement */
@@ -289,65 +364,6 @@ thead th:last-child{
 /* align-items: center; */
 /*  center les éléments sur l'axe secondaire = axe vertical */
 /* flex-direction: column; */
-/* } */
-
-
-/* Conteneur Flexbox */
-.categories-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    /* permet le retour à la ligne */
-    gap: 20px;
-    /* espace homogène entre les éléments */
-    list-style: none;
-    /* supprime les puces de la liste */
-}
-
-/* Les cartes catégories */
-.categories-card {
-    background-color: #ececec;
-    width: auto;
-    height: auto;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.categories-card h2 {
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-.categories-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px 5px 0 0;
-}
-
-.categories-card button {
-    background-color: grey;
-    border: none;
-}
-
-.categories-card button:hover {
-    transform: scale(1.05);
-    background-color: #e94444;
-}
-
-
-
-
-
-/* Aligner les produits verticalement */
-/* .products-container { */
-/* la propriété principale de Flexbox */
-/* display: flex; */
-/* height: 1500px; */
-/* flex-direction: column;Choisir la direction des éléments : colonne */
-/* justify-content: center;  center les éléments sur l'axe principale = axe vertical */
-/* align-items: center; center les éléments sur l'axe secondaire = axe horizontal */
 /* } */
 
 /* .products-list h2 {
@@ -374,19 +390,56 @@ border-color: #1e40af; */
     align-items: center;
 } */
 
-/* grid css */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.categories-card {
+    background-color: #ececec;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.categories-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+
+.categories-card button {
+    background-color: grey;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.categories-card button:hover {
+    transform: scale(1.05);
+    background-color: #e94444;
+}
+
+/* -----------------------------------
+   GRID PRODUITS
+----------------------------------- */
 .product-container {
     display: grid;
-    /* Découper ligne en morceaux */
+       /* Découper ligne en morceaux */
     /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 20px; */
+      /* gap: 20px; */
     /* Dépplacer la grille entière */
     justify-content: center;
     align-content: center;
     /* poitionner les éléments dans leurs cellules */
     justify-items: center;
     align-items: center;
+    gap: 20px;
 }
 
 /* .prod1 {
@@ -400,39 +453,39 @@ border-color: #1e40af; */
     left: 30px;
 } */
 
+/* -----------------------------------
+   SCROLL TOP BUTTON
+----------------------------------- */
 .scroll-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    background: grey;
+    padding: 10px;
+    border-radius: 5%;
+    cursor: pointer;
 }
 
-td {
-    position: relative;
-}
+/* -----------------------------------
+   RESPONSIVE
+----------------------------------- */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        gap: 10px;
+    }
 
-.badge-table {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: darkred;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: 900;
-}
+    .product-container {
+        grid-template-columns: 1fr;
+    }
 
-.carousel-img {
-    width: 60%; 
-    height: auto;
-    margin: auto; 
-}
+    .product-card img,
+    .carousel-inner img {
+        height: 200px;
+    }
 
-div a {
-  display: inline-flex;        /* permet de centrer l’icône */
-  align-items: center;
-  justify-content: center;
-  width: 44px;                 /* taille minimale recommandée */
-  height: 44px;
-  margin: 6px;                 /* espace entre les icônes */
-  text-decoration: none;
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
